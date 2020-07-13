@@ -4,9 +4,8 @@ public class Utils {
     // Obtiene el arreglo de números enteros dada una línea
     public int[] parseLine(String lineArray) {
         try {
-            // Separamos los enteros por whitespace
-            // utilizando una expresión regular para identificar multiples ocurrencias
-            // del caracter whitespace.
+            // Separamos los enteros por whitespace utilizando una expresión regular
+            // para identificar multiples ocurrencias del mismo.
             String[] split = lineArray.split("\\s+");
             int[] arr = new int[split.length];
 

@@ -5,9 +5,9 @@ public class TP1 {
         try {
             BufferedReader f = new BufferedReader(new InputStreamReader(System.in));
             Utils utils = new Utils();
-            String x = null;
-            while ((x = f.readLine()) != null) {
-                int[] numbers = utils.parseLine(x);
+            String inputLine = null;
+            while ((inputLine = f.readLine()) != null) {
+                int[] numbers = utils.parseLine(inputLine);
                 int[] sortedNumbers = utils.sort(numbers);
 
                 for (int i = 0; i < sortedNumbers.length; i++) {
@@ -16,8 +16,7 @@ public class TP1 {
                 System.out.println();
             }
         } catch (Exception e) {
-
-            System.out.println("¡Error en el ingreso de datos!");
+            System.err.println("¡Error en el ingreso de datos!");
         }
     }
 }
