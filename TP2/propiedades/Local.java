@@ -2,7 +2,7 @@ package propiedades;
 
 public class Local extends Unidad {
     public String generarContrato(String habilitacion) {
-        return "contrato de alquiler para departamento\n" + habilitacion;
+        return "contrato de alquiler para departamento\n\t" + habilitacion;
     }
 
     public Local(String descripcion, int dni, char g, double superficie) {
