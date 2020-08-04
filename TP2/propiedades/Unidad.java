@@ -1,7 +1,6 @@
 package propiedades;
 
-import utilidades.CuitUtils;
-import utilidades.PdfUtils;
+import utilidades.*;
 
 import java.text.DecimalFormat;
 

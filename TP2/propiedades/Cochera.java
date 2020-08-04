@@ -12,12 +12,17 @@ public class Cochera extends Unidad {
     }
 
     public String toString() {
-        String tipoInquilino = "persona";
+        try {
+            String tipoInquilino = "persona";
 
-        if (this.inquilino.genero == 'S') tipoInquilino = "empresa";
+            if (this.inquilino.genero == 'S') tipoInquilino = "empresa";
 
-        return "La superficie asignada a la cochera " + this.descripcion + " es de " + this.obtenerSuperficie() +
-                " y ha sido alquilada por la " + tipoInquilino + " cuyo CUIT es " +
-                this.obtenerCuit(this.inquilino.genero, this.inquilino.DNI);
+            return "La superficie asignada a la cochera " + this.descripcion + " es de " + this.obtenerSuperficie() +
+                    " y ha sido alquilada por la " + tipoInquilino + " cuyo CUIT es " +
+                    this.obtenerCuit(this.inquilino.genero, this.inquilino.DNI);
+        } catch (Exception err) {
+            System.out.print(e);
+            return "Ha ocurrido un error";
+        }
     }
 }
