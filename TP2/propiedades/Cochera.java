@@ -21,7 +21,7 @@ public class Cochera extends Unidad {
                     " y ha sido alquilada por la " + tipoInquilino + " cuyo CUIT es " +
                     this.obtenerCuit(this.inquilino.genero, this.inquilino.DNI);
         } catch (Exception err) {
-            System.out.print(e);
+            System.out.print(err);
             return "Ha ocurrido un error";
         }
     }
