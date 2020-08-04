@@ -5,13 +5,22 @@ public class Local extends Unidad {
         return "contrato de alquiler para departamento\n" + habilitacion;
     }
 
-    public Local(String descripcion, int dni, char g) {
+    public Local(String descripcion, int dni, char g, double superficie) {
         this.descripcion = descripcion;
         this.inquilino = new Inquilino(dni, g);
+        this.superficie = superficie;
     }
 
     public String toString() {
-        return "La superficie asignada al local comercial " + this.descripcion + " es de " + this.obtenerSuperficie() +
-                " y ha sido alquilada por " + this.obtenerCuit(this.inquilino.genero, this.inquilino.DNI);
+        try {
+            String tipoInquilino = "persona";
+            if (this.inquilino.genero == 'S') tipoInquilino = "empresa";
+            return "La superficie asignada al local comercial " + this.descripcion + " es de " + this.obtenerSuperficie() +
+                    " y ha sido alquilada por la " + tipoInquilino + " cuyo CUIT es de " +
+                    this.obtenerCuit(this.inquilino.genero, this.inquilino.DNI);
+        } catch (Exception e) {
+            System.out.print(e);
+            return "Ha ocurrido un error";
+        }
     }
 }
