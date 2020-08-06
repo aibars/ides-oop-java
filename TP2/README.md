@@ -1,6 +1,6 @@
 ### Trabajo Práctico 2
 
-Para compilar y ejecutar el programa ejecutar 
+Para compilar y correr el programa ejecutar:
 
 `javac Main.java && java Main`
 
