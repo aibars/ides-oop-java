@@ -6,6 +6,7 @@ import java.text.DecimalFormat;
 
 public abstract class Unidad {
 
+    public int id;
     public double superficie;
     public String descripcion;
     public Inquilino inquilino;

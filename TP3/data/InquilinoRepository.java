@@ -1,18 +1,19 @@
 package data;
 
 import propiedades.Inquilino;
+import utilidades.HibernateUtils;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
 public class InquilinoRepository {
 
-    public void addInquilino(Inquilino user) {
-     /*   Transaction trns = null;
-        Session session = HibernateUtil.getSessionFactory().openSession();
+    public void addInquilino(Inquilino item) {
+        Transaction trns = null;
+        Session session = HibernateUtils.getSessionFactory().openSession();
         try {
             trns = session.beginTransaction();
-            session.save(user);
+            session.save(item);
             session.getTransaction().commit();
         } catch (RuntimeException e) {
             if (trns != null) {
@@ -22,6 +23,6 @@ public class InquilinoRepository {
         } finally {
             session.flush();
             session.close();
-        }*/
+        }
     }
 }
