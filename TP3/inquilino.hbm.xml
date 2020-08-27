@@ -6,7 +6,6 @@
 <hibernate-mapping>
     <class name="propiedades.Inquilino" table="inquilinos">
         <id name="dni" type="int" column="dni">
-            <generator class="increment" />
         </id>
         <property name="genero">
             <column name="genero" />

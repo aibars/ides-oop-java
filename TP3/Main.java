@@ -21,7 +21,8 @@ public class Main {
 
             var uRepository = new UnidadRepository();
 
-            iRepository.addInquilino(inq);
+            uRepository.addUnidad(depto);
+            //iRepository.addInquilino(inq);
 
         } catch (Exception err) {
             System.out.print(err);
