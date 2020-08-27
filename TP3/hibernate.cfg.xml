@@ -29,7 +29,8 @@
         <property name="hbm2ddl.auto">update</property>
 
         <!-- Mapping files -->
-        <mapping resource="user.hbm.xml" />
+        <mapping resource="inquilino.hbm.xml" />
+        <mapping resource="unidad.hbm.xml" />
 
     </session-factory>
 </hibernate-configuration>
